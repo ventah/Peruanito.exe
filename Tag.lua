@@ -1,3 +1,4 @@
+--[[
 local plrs = game:GetService("Players")
 
 local UI = game:GetObjects("rbxassetid://7437010836")[1]
@@ -93,3 +94,5 @@ game.Players.PlayerAdded:Connect(
             )
         end
     end)
+
+]]
