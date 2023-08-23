@@ -7,7 +7,7 @@ local tweenService = game:GetService("TweenService")
 local runService = game:GetService("RunService")
 local coreGui = game:GetService("CoreGui")
 
-local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.LeftControl, dragSpeed = 0.1}
+local library = {flags = {}, toggled = true, dragSpeed = 0.1}
 
 local themes = {
     Dark = {
@@ -200,8 +200,9 @@ local Peruanito = utility.create("ScreenGui", {})
 Peruanito.Name = "PeruanitoLib"
 Peruanito.Parent = coreGui
 
-inputService.InputBegan:Connect(function(input)
-    if input.KeyCode == library.keybind then
+local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+Mouse.KeyDown:Connect(function(Key)
+    if Key == v then
         library.toggled = not library.toggled
         Peruanito.Enabled = library.toggled
     end
