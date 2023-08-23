@@ -202,7 +202,7 @@ Peruanito.Parent = coreGui
 
 local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 Mouse.KeyDown:Connect(function(Key)
-    if Key == v then
+    if Key == "v" then
         library.toggled = not library.toggled
         Peruanito.Enabled = library.toggled
     end
